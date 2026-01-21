@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imam jedno pitanje za tebe 🎬</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1c1c1c, #3a3a3a);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 400px;
+      width: 90%;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 25px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px;
+      position: relative;
+    }
+    #yes {
+      background-color: #4caf50;
+      color: #fff;
+    }
+    #no {
+      background-color: #f44336;
+      color: #fff;
+    }
+    .info {
+      display: none;
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Draga Tanja</h1>
+    <p>Večeras je premijera "Svadbe" tako da pozivnica stoji</p>
+    <h2>Ako nemaš pametnija posla, da li želiš sa mnom u kino? 🎥🍿</h2>
+
+    <div>
+      <button id="yes">DA</button>
+      <button id="no">NE</button>
+    </div>
+
+    <div class="info" id="movieInfo">
+      <h3>Jedini tačan izbor 😄</h3>
+      <p><strong>Film:</strong> Svadba</p>
+      <p><strong>Kino:</strong> Cinestar Delta</p>
+      <p><strong>Vrijeme:</strong> 20:00 časova</p>
+      <p><strong>Plan:</strong> Imaš i kokice obezbijeđene</p>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('no');
+    const yesBtn = document.getElementById('yes');
+    const info = document.getElementById('movieInfo');
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    yesBtn.addEventListener('click', () => {
+      info.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
